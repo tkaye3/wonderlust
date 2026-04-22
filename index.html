@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Wonderlust Travel- Destination Majorca</title>
+    <link rel="stylesheet" href="./stylesheet/styles.css">
 </head>
 
 <body>
-
+    <div aria-label="Skip links">
+        <a href="#main" class="sr-only">Main Content</a>
+        <a href="#plan-your-trip" class="sr-only">Plan your Trip</a>
+        <a href="#testimonials" class="sr-only">Testimonials</a>
+        <a href="#about-your-destination" class="sr-only">About your Destination</a>
+        <a href="#contact-us" class="sr-only">Contact Us</a>
+    </div>
     <header>
         <h1>Destination Majorca</h1>
         <p>Let Wonderlust Travel help you plan the trip of your dreams!
@@ -20,6 +26,7 @@
     </header>
     <nav>
         <h2>Main Navigation</h2>
+        
         <input type="checkbox" id="dropdown">
         <label for="dropdown"><span></span></label>
         <ul>
@@ -35,16 +42,18 @@
             <li><a href="#">Contact Us</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main">
         <article>
-            Majorca
+            <h3>Majorca</h3>
             <section id="intro">
 
-                Introduction
-                Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage,
-                rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma,
-                are overflowing with character, while its beaches are famous all around the world, making it one of the
-                most sought-after summer destinations.
+                <h3>Introduction</h3>
+                <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage,
+                    rugged mountains, picturesque villages and a vibrant capital city. The island and its capital,
+                    Palma,
+                    are overflowing with character, while its beaches are famous all around the world, making it one of
+                    the
+                    most sought-after summer destinations.</p>
                 <div>
                     <!--Responsive Image for Art Direction
                     images/majorca-beach-square-s.jpg
@@ -53,6 +62,12 @@
 
                     404px, 920px, 1280px
                     -->
+                    <picture>
+                        <source media="(min-width: 1280px)" srcset="images/majorca-beach-horizontal-l.jpg">
+                        <source media="(min-width: 920px)" srcset="images/majorca-beach-vertical-m.jpg">
+                        <source media="(min-width: 404px)" srcset="images/majorca-beach-square-s.jpg">
+                        <img src="images/majorca-beach-horizontal-l.jpg" alt="Majorca Beach">
+                    </picture>
                     <small>Photo by <a
                             href="https://unsplash.com/@charliefirth?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Charlie
                             Firth</a> on <a
@@ -60,10 +75,10 @@
                 </div>
             </section>
             <section id="plan-your-trip">
-                Plan Your Trip
+                <h3>Plan Your Trip</h3>
 
                 <section class="plan">
-                    How to Get There
+                    <h4>How to Get There</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="100"
                         height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -73,7 +88,7 @@
                     <a href="#" title="Search for flights">Search Flights</a>
                 </section>
                 <section class="plan">
-                    Places to Stay
+                    <h4>Places to Stay</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bed" width="100"
                         height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -84,7 +99,7 @@
                     <a href="#" title="Search for Hotels">Search Hotels</a>
                 </section>
                 <section class="plan">
-                    Things to do
+                    <h4>Things to do</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sailboat" width="100"
                         height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -98,7 +113,7 @@
                     <a href="#" title="Search for Activities">Search Activity</a>
                 </section>
                 <section class="plan">
-                    Where to Eat
+                    <h4>Where to Eat</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2"
                         width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -110,7 +125,7 @@
                 </section>
             </section>
             <section id="testimonials">
-                Testimonials
+                <h3>Testimonials</h3>
 
                 <section>
                     <!--Responsive Image for resolution switching
@@ -119,13 +134,19 @@
                         images/miranda-blake-M.png 920w
                         images/miranda-blake-L.png 1280w
                     -->
+                    <img src="images/miranda-blake-L.png" alt="Miranda Blake" srcset="
+                        images/miranda-blake-S.png 404w,
+                        images/miranda-blake-M.png 920w,
+                        images/miranda-blake-L.png 1280w
+                        " sizes="(max-width: 768px) 100vw, 50vw">
                     <div>
-                        Miranda Blake
+                        <h4>Miranda Blake</h4>
                         <dl>
                             <dt>Traveling From:</dt>
                             <dd>London, England</dd>
                         </dl>
-                        "I traveled here for business, but my stay was extended. Now it is my home."
+                        <p>"I traveled here for business, but my stay was extended. Now it is my home."
+                        </p>
                     </div>
                 </section>
                 <section>
@@ -135,13 +156,19 @@
                         images/max-winter-M.png 920w
                         images/max-winter-L.png 1280w
                     -->
+                    <img src="images/max-winter-L.png" alt="Max Winter" srcset="
+                        images/max-winter-S.png 404w,
+                        images/max-winter-M.png 920w,
+                        images/max-winter-L.png 1280w
+                        " sizes="(max-width: 768px) 100vw, 50vw">
                     <div>
-                        Max Winter
+                        <h4>Max Winter</h4>
                         <dl>
                             <dt>Traveling From:</dt>
                             <dd>Berlin, Germany</dd>
                         </dl>
-                        "Great escape from my reality. Beautiful sunsets, wonderful people, great beer."
+                        <p>"Great escape from my reality. Beautiful sunsets, wonderful people, great beer."
+                        </p>
                     </div>
                 </section>
                 <section>
@@ -151,13 +178,18 @@
                         images/ines-villegoes-M.png 920w
                         images/ines-villegoes-L.png 1280w 
                     -->
+                    <img src="images/ines-villegoes-L.png" alt="Inés Villegoes" srcset="
+                        images/ines-villegoes-S.png 404w,
+                        images/ines-villegoes-M.png 920w,
+                        images/ines-villegoes-L.png 1280w
+                        " sizes="(max-width: 768px) 100vw, 50vw">
                     <div>
-                        Inés Villegoes
+                        <h4>Inés Villegoes</h4>
                         <dl>
                             <dt>Traveling From:</dt>
                             <dd>Barcelona, Spain</dd>
                         </dl>
-                        "A very safe environment for all travelers."
+                        <p>"A very safe environment for all travelers."</p>
                     </div>
                 </section>
                 <section>
@@ -167,21 +199,26 @@
                         images/carmen-lorenzo-M.png 920w
                         images/carmen-lorenzo-L.png 1280w
                     -->
+                    <img src="images/carmen-lorenzo-L.png" alt="Carmen Lorenzo" srcset="
+                        images/carmen-lorenzo-S.png 404w,
+                        images/carmen-lorenzo-M.png 920w,
+                        images/carmen-lorenzo-L.png 1280w
+                        " sizes="(max-width: 768px) 100vw, 50vw">
                     <div>
-                        Carmen Lorenzo
+                        <h4>Carmen Lorenzo</h4>
                         <dl>
                             <dt>Traveling From:</dt>
                             <dd>Madrid, Spain</dd>
                         </dl>
-                        "Live, laugh, love-- everything you need in Majorca."
+                        <p>"Live, laugh, love-- everything you need in Majorca."</p>
                     </div>
                 </section>
             </section>
             <section id="about-your-destination">
-                About Your Destination
+                <h3>About Your Destination</h3>
 
                 <section>
-                    Size
+                    <h4>Size</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ruler-2" width="100"
                         height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -198,7 +235,7 @@
                     </dl>
                 </section>
                 <section>
-                    Elevation
+                    <h4>Elevation</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-top-bar"
                         width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -213,7 +250,7 @@
                     </dl>
                 </section>
                 <section>
-                    Location
+                    <h4>Location</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="100"
                         height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -227,7 +264,7 @@
                     </dl>
                 </section>
                 <section>
-                    Population
+                    <h4>Population</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="100"
                         height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#1B263B" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -247,36 +284,36 @@
     </main>
     <footer>
         <section id="contact-us">
-            Contact Us <span id="required">(*required)</span>
-
+            <h3>Contact Us <span id="required">(*required)</span>
+            </h3>
             <div>
-                <label>First Name<span>*</span></label>
-                <input>
+                <label for="first-name">First Name<span>*</span></label>
+                <input id="first-name" type="text" required>
             </div>
             <div>
-                <label>Last Name<span>*</span></label>
-                <input>
+                <label for="last-name">Last Name<span>*</span></label>
+                <input id="last-name" type="text" required>
             </div>
             <div>
-                <label>Email<span>*</span></label>
-                <input>
+                <label for="email">Email<span>*</span></label>
+                <input id="email" type="email" required>
             </div>
             <div>
-                <label>Phone<span>*</span></label>
-                <input>
+                <label for="phone">Phone<span>*</span></label>
+                <input id="phone" type="tel" required>
             </div>
             <fieldset id="preferred-contact">
                 <legend>Preferred Contact Method<span>*</span></legend>
                 <div>
-                    <input>
+                    <input type="radio" id="contact-email" name="contact-method" value="email">
                     <label>Email</label>
                 </div>
                 <div>
-                    <input>
+                    <input type="radio" id="contact-text" name="contact-method" value="text">
                     <label>Text</label>
                 </div>
                 <div>
-                    <input>
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
                     <label>Phone</label>
                 </div>
             </fieldset>
@@ -306,11 +343,11 @@
                     <option>Flexible</option>
                 </select>
             </fieldset>
-            <input>
+            <input type="submit" value="Submit">
 
         </section>
         <section id="legal">
-            Legal
+            <p>Legal</p>
             <small>Copyright 2021 Wonderlust</small>
             <a href="#">Privacy Statement</a>
             <a href="#">Terms of Service</a>
